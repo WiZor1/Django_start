@@ -1,0 +1,15 @@
+<!-- templates/books_reserved.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Books</h1>
+
+    {% for book in books_reserved|dictsortreversed:'rating' %}
+    <div>
+        <h3><a href="{% url 'book_detailed' book.pk %}"><b>{{ book.title }}</b></a></h3>
+        <p> <i>Rating:</i> {{ book.rating }}, <i>Author:</i> {{ book.author }}</p>
+    </div>
+    <hr align="left" width="300" />
+    {% endfor %}
+{% endblock content %}

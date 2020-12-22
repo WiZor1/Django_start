@@ -1,0 +1,12 @@
+<!-- templates/detail_journal.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>
+    {{ journal.title }}
+</h1>
+<p>This wonderful journal edited by {{ journal.editor }} and has {{ journal.pages_count }} pages</p>
+
+{% endblock content %}

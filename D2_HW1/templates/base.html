@@ -1,0 +1,19 @@
+<!-- templates/base.html -->
+
+<html>
+    <body>
+        <header>
+            <h2>
+                <a href="{% url 'home' %}">Main page </a> | <a href="{% url 'books' %}"> Books</a> | <a href="{% url 'journals' %}">Journals</a>
+            </h2>
+            <h2>
+                Alternate: | <a href="{% url 'books_reserved' %}"> Books</a> | <a href="{% url 'journals_reserved' %}">Journals</a>
+            </h2>
+            <hr>
+        </header>
+        <div>
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<!-- templates/books.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Books</h1>
+
+    {% for book in books %}
+    <div>
+        <a href="{% url 'book_detailed' book.pk %}">{{ book.title }}</a> | Author: {{ book.author }} | Rating: {{ book.rating }}
+    </div>
+    <hr align="left" width="500" />
+    {% endfor %}
+{% endblock content %}
