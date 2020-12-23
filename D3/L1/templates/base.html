@@ -1,0 +1,22 @@
+<!-- templates/base.html -->
+{% load static %}
+
+<html>
+    <head>
+        <title>Big application</title>
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="{% url 'home' %}">Homepage</a> 
+                 |
+                <a href="{% url 'new_post' %}">+ New Blog Post</a>
+            </h1>
+        </header>
+        <div>
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>
