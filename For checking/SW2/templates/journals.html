@@ -1,0 +1,14 @@
+<!-- templates/journals.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Journals</h1>
+
+    {% for journal in journals %}
+    <div>
+        <a href="{% url 'journal_detailed' journal.pk %}">{{ journal.title }}</a> | Edited by: {{ journal.editor}} | Num. of pages: {{journal.pages_count}}
+    </div>
+    <hr align="left" width="500" />
+    {% endfor %}
+{% endblock content %}

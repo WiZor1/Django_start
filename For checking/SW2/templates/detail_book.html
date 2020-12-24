@@ -1,0 +1,12 @@
+<!-- templates/detail_book.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>
+    {{ book.title }}
+</h1>
+<p>This wonderful book is written by {{ book.author }} and has a rating of {{ book.rating }}</p>
+
+{% endblock content %}

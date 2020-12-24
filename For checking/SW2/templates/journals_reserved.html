@@ -1,0 +1,15 @@
+<!-- templates/journals_reserved.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Journals</h1>
+
+    {% for journal in journals_reserved|dictsortreversed:'pages_count' %}
+    <div>
+        <h3><a href="{% url 'journal_detailed' journal.pk %}"><b>{{ journal.title }}</b></a></h3>
+        <p> <i>Number of yellow pages:</i> {{ journal.pages_count }}, <i>Editor:</i> {{ journal.editor }}</p>
+    </div>
+    <hr align="left" width="300" />
+    {% endfor %}
+{% endblock content %}
