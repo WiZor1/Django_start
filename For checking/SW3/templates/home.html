@@ -1,0 +1,11 @@
+<!--templates/home.html-->
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Portfolio Shop Application</h1>
+        <p class="lead">Simlpe Shop-Webside building with Django</p>
+            <a href="{% url 'list_items' %}" class="btn btn-primary btn-lg" role="button">View All Products</a>
+    </div>
+{% endblock content %}
